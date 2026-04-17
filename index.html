@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="p-EHKyRaWJgzCkhZGoCqx7oYj9dyX-HJnuwdGjIR4Oo" />
+    <title>ADN Informatique | IT Monitor</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">ADN <span>Informatique</span></div>
+            <div class="status-indicator">Système Actif</div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="search-section">
+            <h1>Moniteur de Terminologie IT</h1>
+            <p>Recherchez une définition technique instantanée.</p>
+            
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Ex: Noyau Linux, Algorithme, SSH...">
+                <button id="searchBtn">Analyser</button>
+            </div>
+        </section>
+
+        <section class="result-section" id="resultArea">
+            <div class="result-card">
+                <div class="result-text">
+                    <h2 id="termTitle">Architecture Client-Serveur</h2>
+                    <p id="termDefinition">
+                        Modèle d'environnement réseau dans lequel un programme (le client) demande 
+                        un service ou une ressource à un autre programme (le serveur).
+                    </p>
+                    <span class="tag">Réseau</span>
+                </div>
+                <div class="result-image">
+                    <img src="https://via.placeholder.com/400x250" alt="Illustration IT" id="termImage">
+                </div>
+            </div>
+        </section>
+
+        <section class="dashboard">
+            <aside class="sidebar">
+                <h3>Historique IT</h3>
+                <ul id="historyList">
+                    <li class="empty-msg">Aucune recherche</li>
+                </ul>
+                <button id="clearHistory">Effacer</button>
+            </aside>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 ADN Informatique - Terminal Engine v1.0</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

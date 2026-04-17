@@ -1,0 +1,197 @@
+:root {
+    --bg-color: #0f172a;
+    --card-bg: #1e293b;
+    --accent-color: #38bdf8;
+    --text-main: #f8fafc;
+    --text-dim: #94a3b8;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+/* Header & Nav */
+header {
+    padding: 1.5rem 10%;
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo span {
+    color: var(--accent-color);
+}
+
+/* Search Section */
+.search-section {
+    text-align: center;
+    padding: 4rem 10%;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.search-container {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+input {
+    padding: 1rem 1.5rem;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 8px;
+    border: 1px solid #334155;
+    background: var(--card-bg);
+    color: white;
+    outline: none;
+}
+
+input:focus {
+    border-color: var(--accent-color);
+}
+
+button {
+    padding: 1rem 2rem;
+    background: var(--accent-color);
+    border: none;
+    border-radius: 8px;
+    color: var(--bg-color);
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+}
+
+/* Result Card */
+.result-section {
+    padding: 2rem 10%;
+    display: flex;
+    justify-content: center;
+}
+
+.result-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    max-width: 900px;
+    border: 1px solid #334155;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.result-text {
+    padding: 2rem;
+    flex: 1;
+}
+
+.tag {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.2rem 0.8rem;
+    background: rgba(56, 189, 248, 0.1);
+    color: var(--accent-color);
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+.result-image {
+    flex: 1;
+    background: #000;
+}
+
+.result-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .result-card { flex-direction: column; }
+    .search-container { flex-direction: column; }
+}
+.dashboard {
+    display: flex;
+    min-height: 80vh;
+}
+
+.sidebar {
+    width: 250px;
+    background: #1e293b;
+    border-right: 1px solid #334155;
+    padding: 20px;
+}
+
+.sidebar h3 {
+    font-size: 0.9rem;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#historyList {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+#historyList li {
+    padding: 10px;
+    border-bottom: 1px solid #334155;
+    transition: 0.3s;
+    font-size: 0.9rem;
+}
+
+#historyList li:hover {
+    background: rgba(56, 189, 248, 0.1);
+    color: var(--accent-color);
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+.logo-wrapper {
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center;    /* Centre verticalement */
+    padding: 20px;
+}
+
+.header-logo {
+    max-height: 120px; /* Ajuste cette valeur pour la taille du logo dans ton en-tête */
+    width: auto;       /* Garde les proportions de l'image */
+    border-radius: 8px; /* Adoucit les coins de l'image sur fond sombre */
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.5)); /* Petit effet 3D tech */
+}
